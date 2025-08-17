@@ -2,7 +2,7 @@ server:
   port: 8080
   servlet:
     context-path: /api
-
+## http://localhost:8080/api/swagger-ui/index.html#/
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/cvanalyzer

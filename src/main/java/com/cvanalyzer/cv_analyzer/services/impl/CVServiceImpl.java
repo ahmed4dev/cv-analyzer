@@ -4,7 +4,6 @@ package com.cvanalyzer.cv_analyzer.services.impl;
 import com.cvanalyzer.cv_analyzer.models.CV;
 import com.cvanalyzer.cv_analyzer.repositories.CVRepository;
 import com.cvanalyzer.cv_analyzer.services.CVService;
-import com.cvanalyzer.cv_analyzer.services.FileStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,8 +17,6 @@ public class CVServiceImpl implements CVService {
 
     @Autowired
     private CVRepository cvRepository;
-
-    private FileStorageService fileStorageService;
 
     @Override
     public CV saveCV(MultipartFile file) {
