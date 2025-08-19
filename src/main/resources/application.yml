@@ -27,3 +27,4 @@ app:
     location: ./uploads
   nlp:
     models-dir: classpath:/nlp-models
+    annotators: tokenize, ssplit, pos, lemma, ner, regexner

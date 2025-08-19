@@ -3,6 +3,7 @@ package com.cvanalyzer.cv_analyzer.models;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Table(name = "cvs")
@@ -22,6 +23,12 @@ public class CV {
     private byte[] data;
 
     private LocalDateTime uploadDate;
+
+    @Lob
+    private String parsedText;
+
+    @ElementCollection
+    private Set<String> skills; // Compétences techniques
 
     @OneToOne(mappedBy = "cv", cascade = CascadeType.ALL)
     private AnalysisResult analysisResult;

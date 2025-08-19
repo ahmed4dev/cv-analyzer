@@ -2,19 +2,13 @@ package com.cvanalyzer.cv_analyzer.services.impl;
 
 import com.cvanalyzer.cv_analyzer.models.AnalysisResult;
 import com.cvanalyzer.cv_analyzer.models.CV;
-import com.cvanalyzer.cv_analyzer.models.Skill;
 import com.cvanalyzer.cv_analyzer.repositories.AnalysisRepository;
 import com.cvanalyzer.cv_analyzer.repositories.CVRepository;
 import com.cvanalyzer.cv_analyzer.services.AnalysisService;
 import com.cvanalyzer.cv_analyzer.services.NLPProcessor;
-import jakarta.persistence.Cacheable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
-import java.util.List;
 
 @Service
 public class AnalysisServiceImpl implements AnalysisService {
@@ -46,8 +40,6 @@ public class AnalysisServiceImpl implements AnalysisService {
         return analysisRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Analysis not found"));
     }
-
-
 
     private String extractTextFromCV(CV cv) {
         // Implémentation réelle utilisant PDFParser ou DocxParser
