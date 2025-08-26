@@ -23,6 +23,9 @@ spring:
       max-request-size: 10MB
 
 app:
+  jwtSecret: "y9w!2Kf8Xn$1vR@pCz7^Gh#0Lk@8wMq%RandomExtraCharactersToMakeItLongEnough1234567890"
+  jwtExpirationMs: 86400000
+  jwtIssuer: cv-analyzer-api
   storage:
     location: ./uploads
   nlp:
