@@ -41,4 +41,8 @@ app:
   nlp:
     models-dir: classpath:/nlp-models
     annotators: tokenize, ssplit, pos, lemma, ner, regexner
+  kibana:
+    host: localhost
+    port: 5601
+    url: http://localhost:5601
 
